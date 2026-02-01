@@ -1,7 +1,4 @@
-namespace Utils.Tests;
-
 using System.Globalization;
-using Utils.Type;
 
 public class NumberTests
 {
