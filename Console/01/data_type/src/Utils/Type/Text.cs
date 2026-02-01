@@ -1,5 +1,3 @@
-using System.Numerics;
-
 namespace Utils.Type;
 
 public static class Text

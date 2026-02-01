@@ -1,5 +1,7 @@
 using System.Globalization;
 
+namespace Utils.Tests;
+
 public class NumberTests
 {
     [Fact]
