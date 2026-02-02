@@ -69,13 +69,11 @@ public class NumberTests
         Assert.Equal(expected, result);
     }
 
-    [Fact]
-    public void AsDecimalError()
+    [Theory]
+    [InlineData(20, 999)]
+    [InlineData(20, -1)]
+    public void AsDecimalError(int value, int fractionalValue)
     {
-        //Arrage
-        int value = 20;
-        int fractionalValue = 999;
-
         //Assert
         Exception result = Assert.Throws<ArgumentOutOfRangeException>(() => Number.AsDecimal(value, fractionalValue));
     }
