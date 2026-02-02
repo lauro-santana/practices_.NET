@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using System.Globalization;
 
 namespace Utils.Tests;
@@ -66,5 +67,16 @@ public class NumberTests
 
         //Assert
         Assert.Equal(expected, result);
+    }
+
+    [Fact]
+    public void AsDecimalError()
+    {
+        //Arrage
+        int value = 20;
+        int fractionalValue = 999;
+
+        //Assert
+        Exception result = Assert.Throws<ArgumentOutOfRangeException>(() => Number.AsDecimal(value, fractionalValue));
     }
 }

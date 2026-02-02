@@ -56,6 +56,11 @@ public class Number
     /// var result = Number.AsDecimal(10, 25); // 10.25
     /// </code>
     /// </example>
-    public static decimal AsDecimal(int value, int fractionalValue) =>
-        value + fractionalValue * 0.01M;
+    public static decimal AsDecimal(int value, int fractionalValue) {
+        if (fractionalValue > 99 || fractionalValue < 0)
+        {
+            throw new ArgumentOutOfRangeException(nameof(fractionalValue), "The fractional value must be between 0 and 99.");
+        }
+        return value + fractionalValue * 0.01M;
+    }
 }
