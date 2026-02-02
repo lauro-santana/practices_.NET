@@ -57,5 +57,5 @@ public class Number
     /// </code>
     /// </example>
     public static decimal AsDecimal(int value, int fractionalValue) =>
-        value + (decimal)fractionalValue / 100;
+        value + fractionalValue * 0.01M;
 }

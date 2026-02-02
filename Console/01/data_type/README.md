@@ -39,6 +39,12 @@ dotnet sln list
 dotnet sln remove
 ```
 
+### Add a package to project
+
+```
+dotnet add benchmark/Utils package BenchmarkDotNet
+```
+
 ### Running the project
 
 ```
@@ -50,3 +56,15 @@ dotnet run --project src/Console/
 ```
 dotnet test
 ```
+
+### Running benchmark
+
+```
+dotnet run -c Release
+```
+> In the benchmark project
+
+```
+dotnet run -c Release -- --method AsDecimal
+```
+> Run only one method

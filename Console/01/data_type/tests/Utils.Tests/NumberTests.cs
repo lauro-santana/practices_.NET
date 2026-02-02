@@ -20,6 +20,9 @@ public class NumberTests
 
     [Theory]
     [InlineData(20, 20, 20.20)]
+    [InlineData(30, 20, 30.20)]
+    [InlineData(0, 20, 0.20)]
+    [InlineData(1, 0, 1.00)]
     public void AsDecimalFromIntCases(int value, int fractionalValue, decimal expected)
     {
        
